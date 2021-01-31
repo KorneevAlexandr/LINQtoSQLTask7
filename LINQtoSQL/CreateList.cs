@@ -92,11 +92,19 @@ namespace LINQtoSQL
 				numbers = 0;
 				foreach (var S in Students)
 				{
-					if (S.ExamName_1.Trim() == E.Examen.Trim() || S.ExamName_2.Trim() == E.Examen.Trim()
-						|| S.ExamName_3.Trim() == E.Examen.Trim() || S.ExamName_1.Trim() == E.Examen_2.Trim() 
-						|| S.ExamName_2.Trim() == E.Examen_2.Trim() || S.ExamName_3.Trim() == E.Examen_2.Trim())
+					if (S.ExamName_1.Trim() == E.Examen.Trim() || S.ExamName_1.Trim() == E.Examen_2.Trim())
 					{
-						sum += (S.Mark_1 + S.Mark_2 + S.Mark_3) / 3;
+						sum += S.Mark_1;
+						numbers++;
+					}
+					else if (S.ExamName_2.Trim() == E.Examen.Trim() || S.ExamName_2.Trim() == E.Examen_2.Trim())
+					{
+						sum += S.Mark_2;
+						numbers++;
+					}
+					else if (S.ExamName_3.Trim() == E.Examen.Trim() || S.ExamName_3.Trim() == E.Examen_2.Trim())
+					{
+						sum += S.Mark_3;
 						numbers++;
 					}
 				}

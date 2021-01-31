@@ -9,6 +9,9 @@ using System.Data;
 
 namespace LINQtoSQL
 {
+	/// <summary>
+	/// Class for update database
+	/// </summary>
 	public class UpdateDataBase
 	{
 		/// <summary>

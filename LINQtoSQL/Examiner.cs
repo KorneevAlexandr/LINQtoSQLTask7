@@ -63,7 +63,7 @@ namespace LINQtoSQL
 		/// <returns>String</returns>
 		public override string ToString()
 		{
-			return String.Concat(Id.ToString(), " ", Name, " ", SurName, " ", Patronymic, " ",
+			return String.Concat(Id.ToString(), " ", SurName, " ", Name, " ", Patronymic, " ",
 				Examen, " ", Examen_2);
 		}
 
